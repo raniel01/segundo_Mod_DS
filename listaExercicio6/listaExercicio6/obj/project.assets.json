@@ -664,23 +664,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ranie\\.nuget\\packages\\": {},
+    "C:\\Users\\aluno2\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ranie\\source\\repos\\segundo_mod_ds\\segundo_Mod_DS\\listaExercicio6\\listaExercicio6\\listaExercicio6.csproj",
+      "projectUniqueName": "C:\\Users\\aluno2\\Source\\Repos\\segundo_Mod_DS\\listaExercicio6\\listaExercicio6\\listaExercicio6.csproj",
       "projectName": "listaExercicio6",
-      "projectPath": "C:\\Users\\ranie\\source\\repos\\segundo_mod_ds\\segundo_Mod_DS\\listaExercicio6\\listaExercicio6\\listaExercicio6.csproj",
-      "packagesPath": "C:\\Users\\ranie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ranie\\source\\repos\\segundo_mod_ds\\segundo_Mod_DS\\listaExercicio6\\listaExercicio6\\obj\\",
+      "projectPath": "C:\\Users\\aluno2\\Source\\Repos\\segundo_Mod_DS\\listaExercicio6\\listaExercicio6\\listaExercicio6.csproj",
+      "packagesPath": "C:\\Users\\aluno2\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aluno2\\Source\\Repos\\segundo_Mod_DS\\listaExercicio6\\listaExercicio6\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ranie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aluno2\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

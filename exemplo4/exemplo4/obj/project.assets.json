@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aluno1\\Source\\Repos\\segundo_Mod_DS\\DS\\exemplo4\\exemplo4\\exemplo4.csproj",
+      "projectUniqueName": "C:\\Users\\aluno1\\Source\\Repos\\DS\\exemplo4\\exemplo4\\exemplo4.csproj",
       "projectName": "exemplo4",
-      "projectPath": "C:\\Users\\aluno1\\Source\\Repos\\segundo_Mod_DS\\DS\\exemplo4\\exemplo4\\exemplo4.csproj",
+      "projectPath": "C:\\Users\\aluno1\\Source\\Repos\\DS\\exemplo4\\exemplo4\\exemplo4.csproj",
       "packagesPath": "C:\\Users\\aluno1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aluno1\\Source\\Repos\\segundo_Mod_DS\\DS\\exemplo4\\exemplo4\\obj\\",
+      "outputPath": "C:\\Users\\aluno1\\Source\\Repos\\DS\\exemplo4\\exemplo4\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

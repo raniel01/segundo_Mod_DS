@@ -12,6 +12,7 @@ namespace listaExercicio6
         private int ano;
         private string cor;
         private int numero_portas;
+        private string placa;
 
         // CONSTRUTOR SEM PARÂMETROS
         public Veiculo()
@@ -21,17 +22,19 @@ namespace listaExercicio6
             this.ano = 0;
             this.cor = null;
             this.numero_portas = 0;
+            this.placa = null;
         }
 
 
         // CONSTRUTOR COM PARÂMETROS
-        public Veiculo(string modelo, string fabricante, int ano, string cor, int numero_portas)
+        public Veiculo(string modelo, string fabricante, int ano, string cor, int numero_portas, string placa)
         {
             this.modelo = modelo;
             this.fabricante = fabricante;
             this.ano = ano;
             this.cor = cor;
             this.numero_portas = numero_portas;
+            this.placa = placa;
         }
 
         //PROPRIEDADES DO CAMPO PARA ACESSO AO SEU CONTEÚDO
@@ -60,12 +63,17 @@ namespace listaExercicio6
             get { return numero_portas; }
             set { numero_portas = value; }
         }
+        public string Placa
+        {
+            get { return placa; }
+            set { placa = value; }
+        }
 
         //MÉTODO PARA RETORNAR UMA STRING CONTENDO AS INFORMAÇÕES DO VEICULO
 
         public override string ToString()
         {
-            return (String.Format(" Modelo: {0} \n Fabricante: {1} \n Ano: {2} \n Cor: {3} \n Número de Portas: {4} \n", modelo, fabricante, ano, cor, numero_portas));
+            return (String.Format(" Modelo: {0} \n Fabricante: {1} \n Ano: {2} \n Cor: {3} \n Número de Portas: {4} \n Placa: {5}", modelo, fabricante, ano, cor, numero_portas, placa));
         }
     }
 }

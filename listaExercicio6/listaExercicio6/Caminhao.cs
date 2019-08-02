@@ -22,8 +22,8 @@ namespace listaExercicio6
         }
 
         // CONSTRUTOR COM PARÂMETROS
-        public Caminhao (string modelo, string fabricante, int ano, string cor, int numero_portas, int numero_eixos, double peso_maximo_carga, string tipo_caminhao)
-            : base(modelo, fabricante, ano, cor, numero_portas)
+        public Caminhao (string modelo, string fabricante, int ano, string cor, int numero_portas, string placa, int numero_eixos, double peso_maximo_carga, string tipo_caminhao)
+            : base(modelo, fabricante, ano, cor, numero_portas, placa)
         {
             this.numero_eixos = numero_eixos;
             this.peso_maximo_carga = peso_maximo_carga;

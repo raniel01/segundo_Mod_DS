@@ -21,8 +21,8 @@ namespace listaExercicio6
         }
 
         // CONSTRUTOR COM PARÂMETROS
-        public Carro(string modelo, string fabricante, int ano, string cor, int numero_portas, int capacidadePortaMala, bool bagageiro, string carroceria)
-            : base(modelo, fabricante, ano, cor, numero_portas)
+        public Carro(string modelo, string fabricante, int ano, string cor, int numero_portas, string placa, int capacidadePortaMala, bool bagageiro, string carroceria)
+            : base(modelo, fabricante, ano, cor, numero_portas, placa)
         {
             this.capacidadePortaMala = capacidadePortaMala;
             this.bagageiro = bagageiro;

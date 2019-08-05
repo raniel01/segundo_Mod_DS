@@ -37,7 +37,7 @@ namespace listaExercicio6
         public bool Bagageiro
         {
             get { return bagageiro; }
-            set { bagageiro = value; }
+            set { bagageiro = value.ToUpper() == "TRUE" ? "SIM" : "NÃO"; }
         }
         public string Carroceria
         {

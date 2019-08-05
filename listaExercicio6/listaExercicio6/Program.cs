@@ -51,10 +51,14 @@ namespace listaExercicio6
         {
             // entrada de dados usando as variaveis auxiliares
             Console.Write("Digite o modelo: "); string mcar = Console.ReadLine();
-            Console.Write("Digite o fabricante de ", mcar, " :"); string   fcar = Console.ReadLine();
-            Console.Write("Digite a altura de {0}: ", n); double a = double.Parse(Console.ReadLine());
-            Console.Write("Digite a letra correspondente ao sexo (M/F) ");
-            char s = char.Parse(Console.ReadLine());
+            Console.Write("Digite o fabricante:"); string   fcar = Console.ReadLine();
+            Console.Write("Digite o ano de fabricação"); int   ano = int.Parse( Console.ReadLine());
+            Console.Write("Digite a cor"); string cor = Console.ReadLine();
+            Console.Write("Digite o numero de portas"); int portas = int.Parse(Console.ReadLine());
+            Console.Write("Digite a placa"); string placa = Console.ReadLine();
+            Console.Write("Digite a capacidade do porta malas"); int potaMalas = int.Parse(Console.ReadLine());
+            Console.Write("Digite a cor"); string corcar = Console.ReadLine();
+
 
             // criando um objeto, usando o construtor com parametros
             return new Pessoa(n, i, a, s);

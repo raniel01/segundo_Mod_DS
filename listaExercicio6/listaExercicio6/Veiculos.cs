@@ -51,7 +51,7 @@ namespace listaExercicio6
         public int Ano
         {
             get { return ano; }
-            set {ano = value; }
+            set { ano = value; }
         }
         public string Cor
         {

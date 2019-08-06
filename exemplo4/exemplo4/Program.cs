@@ -38,7 +38,7 @@ namespace exemplo4
             Console.WriteLine("4 - Média do Peso Ideal das Mulheres");
             Console.WriteLine("0 - Sair");
             Console.Write("\n Digite uma opção: ");
-            return int.Parse(Console.ReadLine());
+           return int.Parse(Console.ReadLine());
         }
 
         public static Pessoa cadastrarPessoa()

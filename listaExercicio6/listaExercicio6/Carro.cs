@@ -10,6 +10,13 @@ namespace listaExercicio6
         private int capacidadePortaMala;
         private bool bagageiro;
         private string carroceria;
+        private string mcar;
+        private string fcar;
+        private int ano;
+        private string cor;
+        private int portas;
+        private string placa;
+        private int portaMalas;
 
         // CONSTRUTOR SEM PARÂMETROS
         public Carro ()
@@ -18,6 +25,18 @@ namespace listaExercicio6
             capacidadePortaMala = 0;
             bagageiro = false;
             carroceria = null;
+        }
+
+        public Carro(string mcar, string fcar, int ano, string cor, int portas, string placa, int portaMalas, string carroceria)
+        {
+            this.mcar = mcar;
+            this.fcar = fcar;
+            this.ano = ano;
+            this.cor = cor;
+            this.portas = portas;
+            this.placa = placa;
+            this.portaMalas = portaMalas;
+            this.carroceria = carroceria;
         }
 
         // CONSTRUTOR COM PARÂMETROS
@@ -37,7 +56,7 @@ namespace listaExercicio6
         public bool Bagageiro
         {
             get { return bagageiro; }
-            set { bagageiro = value.ToUpper() == "TRUE" ? "SIM" : "NÃO"; }
+            set { bagageiro = value; }
         }
         public string Carroceria
         {

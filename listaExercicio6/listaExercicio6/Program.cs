@@ -8,21 +8,21 @@ namespace listaExercicio6
         {
             const int TAM = 500;
             Veiculo[] v = new Veiculo[TAM]; // declaração do vetor veiculo
-            int c=0; //variavel que servira como contador de veiculos cadastrados
+            int c = 0; //variavel que servira como contador de veiculos cadastrados
             int op = 0;
             do
             {
                 op = menu();
                 switch (op)
                 {
-                    case 1: c++ cadastrarCarro(); break;
-                    case 2: c++ cadastrarCaminhao(); break;
-                    case 3: consultaPlaca(); break;
-                    case 4: consultaCaminhaoMarca(); break;
-                    case 5: consultarCaminhaoModelo(); break;
-                    case 6: consultarCarroCor(); break;
-                    case 7: exibirCarros(); break;
-                    case 8: exibirCaminhao(); break;
+                    case 1: v[c++] = cadastrarCarro(); break;
+                    case 2: v[c++] = cadastrarCaminhao(); break;
+                   // case 3: consultaPlaca(); break;
+                   // case 4: consultaCaminhaoMarca(); break;
+                   // case 5: consultarCaminhaoModelo(); break;
+                   // case 6: consultarCarroCor(); break;
+                   // case 7: exibirCarros(); break;
+                    //case 8: exibirCaminhao(); break;
                     case 0: break;
                     default: Console.WriteLine("Opção invalida"); break;
                 }
@@ -51,17 +51,40 @@ namespace listaExercicio6
         {
             // entrada de dados usando as variaveis auxiliares
             Console.Write("Digite o modelo: "); string mcar = Console.ReadLine();
-            Console.Write("Digite o fabricante:"); string   fcar = Console.ReadLine();
-            Console.Write("Digite o ano de fabricação"); int   ano = int.Parse( Console.ReadLine());
-            Console.Write("Digite a cor"); string cor = Console.ReadLine();
-            Console.Write("Digite o numero de portas"); int portas = int.Parse(Console.ReadLine());
-            Console.Write("Digite a placa"); string placa = Console.ReadLine();
-            Console.Write("Digite a capacidade do porta malas"); int potaMalas = int.Parse(Console.ReadLine());
-            Console.Write("Digite a cor"); string corcar = Console.ReadLine();
+            Console.Write("Digite o fabricante: "); string   fcar = Console.ReadLine();
+            Console.Write("Digite o ano de fabricação: "); int   ano = int.Parse( Console.ReadLine());
+            Console.Write("Digite a cor: "); string cor = Console.ReadLine();
+            Console.Write("Digite o numero de portas: "); int portas = int.Parse(Console.ReadLine());
+            Console.Write("Digite a placa: "); string placa = Console.ReadLine();
+            Console.Write("Digite a capacidade do porta malas: "); int portaMalas = int.Parse(Console.ReadLine()); 
+            Console.Write("O veiculo tem bagageiro <S/N> ?");  string r = Console.ReadLine(); bool bagageiro = r.ToUpper() == "S" ? true : false;
+            Console.Write("Digite o tipo de carro: "); string carroceria = Console.ReadLine();
 
 
             // criando um objeto, usando o construtor com parametros
-            return new Pessoa(n, i, a, s);
+            return new Carro(mcar, fcar, ano, cor, portas, placa, portaMalas, bagageiro, carroceria);
         }
+        public static Caminhao cadastrarCaminhao()
+        {
+            // entrada de dados usando as variaveis auxiliares
+            Console.Write("Digite o modelo: "); string mcam = Console.ReadLine();
+            Console.Write("Digite o fabricante: "); string fcam = Console.ReadLine();
+            Console.Write("Digite o ano de fabricação: "); int ano = int.Parse(Console.ReadLine());
+            Console.Write("Digite a cor: "); string cor = Console.ReadLine();
+            Console.Write("Digite o numero de portas: "); int portas = int.Parse(Console.ReadLine());
+            Console.Write("Digite a placa: "); string placa = Console.ReadLine();
+            Console.Write("Quantos eixos? "); int eixo = int.Parse(Console.ReadLine());
+            Console.Write("Qual peso maximo da carga? "); double peso = double.Parse(Console.ReadLine());
+            Console.Write("Qual tipo do caminhão? "); string tipo = Console.ReadLine();
+
+
+            // criando um objeto, usando o construtor com parametros
+            return new Caminhao (mcam, fcam, ano, cor, portas, placa, eixo, peso, tipo);
+        }
+        public static void consultaPlaca (Veiculo[] v, string placa)
+        {
+
+        }
+
     }
 }

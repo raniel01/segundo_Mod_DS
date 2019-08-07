@@ -9,3 +9,14 @@ C:\Users\aluno1\Source\Repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\bin\
 C:\Users\aluno1\Source\Repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\bin\Debug\netcoreapp2.0\listaExercicio6.pdb
 C:\Users\aluno1\Source\Repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\obj\Debug\netcoreapp2.0\listaExercicio6.dll
 C:\Users\aluno1\Source\Repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\obj\Debug\netcoreapp2.0\listaExercicio6.pdb
+C:\Users\ranie\source\repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\bin\Debug\netcoreapp2.0\listaExercicio6.deps.json
+C:\Users\ranie\source\repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\bin\Debug\netcoreapp2.0\listaExercicio6.runtimeconfig.json
+C:\Users\ranie\source\repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\bin\Debug\netcoreapp2.0\listaExercicio6.runtimeconfig.dev.json
+C:\Users\ranie\source\repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\bin\Debug\netcoreapp2.0\listaExercicio6.dll
+C:\Users\ranie\source\repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\bin\Debug\netcoreapp2.0\listaExercicio6.pdb
+C:\Users\ranie\source\repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\obj\Debug\netcoreapp2.0\listaExercicio6.csprojAssemblyReference.cache
+C:\Users\ranie\source\repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\obj\Debug\netcoreapp2.0\listaExercicio6.csproj.CoreCompileInputs.cache
+C:\Users\ranie\source\repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\obj\Debug\netcoreapp2.0\listaExercicio6.AssemblyInfoInputs.cache
+C:\Users\ranie\source\repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\obj\Debug\netcoreapp2.0\listaExercicio6.AssemblyInfo.cs
+C:\Users\ranie\source\repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\obj\Debug\netcoreapp2.0\listaExercicio6.dll
+C:\Users\ranie\source\repos\segundo_Mod_DS\listaExercicio6\listaExercicio6\obj\Debug\netcoreapp2.0\listaExercicio6.pdb

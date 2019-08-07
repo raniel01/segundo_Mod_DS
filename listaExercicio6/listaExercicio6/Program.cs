@@ -26,7 +26,7 @@ namespace listaExercicio6
                     case 4: consultarCaminhaoModelo(caminhao); break;
                     case 5: consultarCarroCor(carro); break;
                     case 6: exibirCarros(carro); break;
-                    //case 7: exibirCaminhao(caminhao); break;
+                    case 7: exibirCaminhao(caminhao); break;
                     case 0: break;
                     default: Console.WriteLine("Opção invalida"); break;
                 }
@@ -150,6 +150,23 @@ namespace listaExercicio6
                 }
             }
         }
+        public static void exibirCaminhao(Caminhao[] conCaminhao)
+        {
+            Console.Clear();
+            Console.WriteLine("*** EXIBIR CARROS ***\n");
+
+            for (int contCam = 0; contCam < conCaminhao.Length; contCam++)
+            {
+                if (conCaminhao[contCam] != null)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(conCaminhao[contCam].ToString());
+                    Console.WriteLine("**********************************");
+                }
+                    
+
+            }
+        }
         public static void exibirCarros(Carro[] conCarro)
         {
             Console.Clear();
@@ -163,7 +180,7 @@ namespace listaExercicio6
                     Console.WriteLine(conCarro[contCar].ToString());
                     Console.WriteLine("**********************************");
                 }
-                    
+
 
             }
         }

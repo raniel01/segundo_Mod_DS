@@ -6,23 +6,27 @@ namespace listaExercicio6
     {
         static void Main(string[] args)
         {
-            const int TAM = 500;
-            Veiculo[] v = new Veiculo[TAM]; // declaração do vetor veiculo
-            int c = 0; //variavel que servira como contador de veiculos cadastrados
+            const int TAMCAR = 300;
+            Carro[] carro = new Carro[TAMCAR]; // declaração do vetor veiculo
+            int ccar = 0; //variavel que servira como contador de carro cadastrados
+
+            const int TAMCAM = 200;
+            Caminhao[] caminhao = new Caminhao[TAMCAM]; // declaração do vetor veiculo
+            int ccam = 0; //variavel que servira como contador de carro cadastrados
+
             int op = 0;
             do
             {
                 op = menu();
                 switch (op)
                 {
-                    case 1: v[c++] = cadastrarCarro(); break;
-                    case 2: v[c++] = cadastrarCaminhao(); break;
-                   // case 3: consultaPlaca(); break;
-                   // case 4: consultaCaminhaoMarca(); break;
-                   // case 5: consultarCaminhaoModelo(); break;
-                   // case 6: consultarCarroCor(); break;
-                   // case 7: exibirCarros(); break;
-                    //case 8: exibirCaminhao(); break;
+                    case 1: carro[ccar++] = cadastrarCarro(); break;
+                    case 2: caminhao[ccam++] = cadastrarCaminhao(); break;
+                    case 3: consultaPlaca(carro, caminhao); break;
+                    case 4: consultarCaminhaoModelo(caminhao); break;
+                    case 5: consultarCarroCor(carro); break;
+                    case 6: exibirCarros(carro); break;
+                    //case 7: exibirCaminhao(caminhao); break;
                     case 0: break;
                     default: Console.WriteLine("Opção invalida"); break;
                 }
@@ -38,17 +42,18 @@ namespace listaExercicio6
             Console.WriteLine("1 - Cadastrar carro");
             Console.WriteLine("2 - Cadastrar caminnão");
             Console.WriteLine("3 - Consulta por placa");
-            Console.WriteLine("4 - Consulta de caminhão por * marca *");
-            Console.WriteLine("5 - Consulta de caminhão por * modelo *");
-            Console.WriteLine("6 - Consulta de carro por * cor *");
-            Console.WriteLine("7 - Exibir carros");
-            Console.WriteLine("8 - Exibir caminhões");
+            Console.WriteLine("4 - Consulta de caminhão por * modelo *");
+            Console.WriteLine("5 - Consulta de carro por * cor *");
+            Console.WriteLine("6 - Exibir carros");
+            Console.WriteLine("7 - Exibir caminhões");
             Console.WriteLine("0 - Sair");
             Console.Write("\n Digite uma opção: ");
             return int.Parse(Console.ReadLine());
         }
         public static Carro cadastrarCarro()
         {
+            Console.Clear();
+            Console.WriteLine("*** CADASTRO DE CARRO ***\n");
             // entrada de dados usando as variaveis auxiliares
             Console.Write("Digite o modelo: "); string mcar = Console.ReadLine();
             Console.Write("Digite o fabricante: "); string   fcar = Console.ReadLine();
@@ -66,6 +71,8 @@ namespace listaExercicio6
         }
         public static Caminhao cadastrarCaminhao()
         {
+            Console.Clear();
+            Console.WriteLine("*** CADASTRO DE CAMINHÃO ***\n");
             // entrada de dados usando as variaveis auxiliares
             Console.Write("Digite o modelo: "); string mcam = Console.ReadLine();
             Console.Write("Digite o fabricante: "); string fcam = Console.ReadLine();
@@ -81,10 +88,85 @@ namespace listaExercicio6
             // criando um objeto, usando o construtor com parametros
             return new Caminhao (mcam, fcam, ano, cor, portas, placa, eixo, peso, tipo);
         }
-        public static void consultaPlaca (Veiculo[] v, string placa)
+        public static void consultaPlaca(Carro[] conCarro, Caminhao[] conCaminhao)
         {
+            Console.Clear();
+            Console.WriteLine("*** CONSULTA POR PLACA ***\n");
+            Console.Write("Digite a placa do veículo que deseja consultar: "); string consPlaca = Console.ReadLine();
 
+            for (int contCar = 0; contCar < conCarro.Length; contCar++)
+            {
+                if (conCarro[contCar] != null && conCarro[contCar].Placa == consPlaca)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(conCarro[contCar].ToString());
+                   
+                }
+              
+            }
+
+            for (int contCam = 0; contCam < conCaminhao.Length; contCam++)
+            {
+                if (conCaminhao[contCam] != null && conCaminhao[contCam].Placa == consPlaca)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(conCaminhao[contCam].ToString());
+                   
+                }
+                
+            }
         }
+        public static void consultarCaminhaoModelo(Caminhao[] conCaminhao)
+        {
+            Console.Clear();
+            Console.WriteLine("*** CONSULTA DE CAMINÃO POR MODELO ***\n");
 
+            Console.Write("Digite a marca do caminhão que deseja consultar: "); string consModelo = Console.ReadLine();
+
+            for (int contCam = 0; contCam < conCaminhao.Length; contCam++)
+            {
+                if (conCaminhao[contCam] != null && conCaminhao[contCam].Modelo == consModelo)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(conCaminhao[contCam].ToString());
+
+                }
+            }   
+        }
+        public static void consultarCarroCor(Carro[] conCarro)
+        {
+            Console.Clear();
+            Console.WriteLine("*** CONSULTA DE CARRO POR COR ***\n");
+
+            Console.Write("Digite a cor do carro que deseja consultar: "); string consCarro = Console.ReadLine();
+
+            for (int contCar = 0; contCar < conCarro.Length; contCar++)
+            {
+                if (conCarro[contCar] != null && conCarro[contCar].Cor== consCarro)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(conCarro[contCar].ToString());
+
+                }
+            }
+        }
+        public static void exibirCarros(Carro[] conCarro)
+        {
+            Console.Clear();
+            Console.WriteLine("*** EXIBIR CARROS ***\n");
+
+            for (int contCar = 0; contCar < conCarro.Length; contCar++)
+            {
+                if (conCarro[contCar] != null)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(conCarro[contCar].ToString());
+                    Console.WriteLine("**********************************");
+                }
+                    
+
+            }
+        }
     }
+       
 }

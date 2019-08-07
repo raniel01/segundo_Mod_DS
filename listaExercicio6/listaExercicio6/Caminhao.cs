@@ -50,7 +50,7 @@ namespace listaExercicio6
         //MÉTODO PARA RETORNAR UMA STRING CONTENDO AS INFORMAÇÕES DO VEICULO
         public override string ToString()
         {
-            return (String.Format(" Numero de eixos: {0} \n Peso máximo da Carga: {1} \n Tipo de caminão: {2} \n", base.ToString(), numero_eixos, peso_maximo_carga, tipo_caminhao));
+            return (String.Format("{0} Numero de eixos: {1} \n Peso máximo da Carga: {2} \n Tipo de caminão: {3} \n", base.ToString(), numero_eixos, peso_maximo_carga, tipo_caminhao));
         }
     }
 }

@@ -153,7 +153,7 @@ namespace listaExercicio6
         public static void exibirCaminhao(Caminhao[] conCaminhao)
         {
             Console.Clear();
-            Console.WriteLine("*** EXIBIR CARROS ***\n");
+            Console.WriteLine("*** EXIBIR CAMINHÃO ***\n");
 
             for (int contCam = 0; contCam < conCaminhao.Length; contCam++)
             {

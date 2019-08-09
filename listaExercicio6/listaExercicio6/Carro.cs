@@ -67,7 +67,7 @@ namespace listaExercicio6
 
         public override string ToString()
         {
-            return (String.Format("{0} Capacidade do porta mala: {1} \n Bagageiro: {2} \n Tipo: {3} \n", base.ToString(), capacidadePortaMala, bagageiro, carroceria));
+            return (String.Format("{0} Capacidade do porta mala: {1} \n Bagageiro: {2} \n Tipo: {3} \n", base.ToString(), capacidadePortaMala, bagageiro  == true ? "SIM" : "NÃO", carroceria));
         }
     }
 }

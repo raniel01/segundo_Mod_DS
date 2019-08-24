@@ -18,7 +18,7 @@ namespace Exercicio4
             double altura = 1.79;
 
             //criando o arquivo
-            FileStream stream = new FileStream(@"ExemploTeste.bin", FileMode.Create);
+            FileStream stream = new FileStream(@"Exemplo4.bin", FileMode.Create);
 
             // iniciando a variável do tipo BinaryWriter
             BinaryWriter writer = new BinaryWriter(stream);

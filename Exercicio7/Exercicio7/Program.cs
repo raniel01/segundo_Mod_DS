@@ -22,10 +22,10 @@ namespace Exercicio7
                         Console.WriteLine("Digite sua mensagem: ");
                         string msg =  Console.ReadLine();
                         //crindo diretário
-                        Directory.CreateDirectory(@"c:\Teste\");
+                        //Directory.CreateDirectory(@"c:\Teste\");
 
                         //criando o arquivo
-                        FileStream stream = new FileStream(@"c:\Teste\Exercicio2.bin", FileMode.Create);
+                        FileStream stream = new FileStream(@"C:\Users\Public\Exercicio2.bin", FileMode.Create);
 
                         // instanciando a variavel do tipo BinaryWrite
                         BinaryWriter writer = new BinaryWriter(stream);
@@ -37,7 +37,33 @@ namespace Exercicio7
                         writer.Close();
 
                         break;
-                    case 2:  break;
+                    case 2:
+                        Console.Clear();
+                        Console.WriteLine("***** Mensagem ****** ");
+                        string caminho = @"C:\Users\Public\Exercicio1.txt";
+                        // criando objeto
+                        System.IO.StreamReader sr;
+                        String linhaAtual;
+
+                        // verifica se o arquivo não existe
+                        if (!System.IO.File.Exists(caminho))
+                        {
+                            throw (new System.IO.FileNotFoundException("Não Foi possível localizar o arquivo especificado"));
+                        }
+
+                        // iniciando o StreamReader
+
+                        using (sr=new System.IO.StreamReader(caminho))
+                        {
+                            while (!sr.EndOfStream)
+                            {
+                                // recuperar linha
+                                linhaAtual = sr.ReadLine();
+                                Console.WriteLine(linhaAtual);
+                            }
+                        }
+                        Console.ReadKey();
+                    break;
                     case 0:  break;
                     default: Console.WriteLine("Opção Ivalida"); break;
                 }

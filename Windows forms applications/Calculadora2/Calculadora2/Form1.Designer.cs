@@ -46,7 +46,7 @@
             this.btnDiv = new System.Windows.Forms.Button();
             this.btnApagar1 = new System.Windows.Forms.Button();
             this.btnApagarTudo = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.visor = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn1
@@ -58,6 +58,7 @@
             this.btn1.TabIndex = 0;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn2
             // 
@@ -68,6 +69,7 @@
             this.btn2.TabIndex = 1;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn3
             // 
@@ -78,6 +80,7 @@
             this.btn3.TabIndex = 2;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn4
             // 
@@ -88,6 +91,7 @@
             this.btn4.TabIndex = 3;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btn5
             // 
@@ -98,6 +102,7 @@
             this.btn5.TabIndex = 4;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn6
             // 
@@ -108,6 +113,7 @@
             this.btn6.TabIndex = 5;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn7
             // 
@@ -118,6 +124,7 @@
             this.btn7.TabIndex = 6;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // btn8
             // 
@@ -128,6 +135,7 @@
             this.btn8.TabIndex = 7;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn9
             // 
@@ -138,6 +146,7 @@
             this.btn9.TabIndex = 8;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.Click += new System.EventHandler(this.btn9_Click);
             // 
             // btn0
             // 
@@ -148,6 +157,7 @@
             this.btn0.TabIndex = 9;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
+            this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
             // btnVigula
             // 
@@ -158,6 +168,7 @@
             this.btnVigula.TabIndex = 10;
             this.btnVigula.Text = ",";
             this.btnVigula.UseVisualStyleBackColor = true;
+            this.btnVigula.Click += new System.EventHandler(this.btnVigula_Click);
             // 
             // btnIgual
             // 
@@ -168,6 +179,7 @@
             this.btnIgual.TabIndex = 11;
             this.btnIgual.Text = "=";
             this.btnIgual.UseVisualStyleBackColor = true;
+            this.btnIgual.Click += new System.EventHandler(this.btnIgual_Click);
             // 
             // btnMais
             // 
@@ -178,6 +190,7 @@
             this.btnMais.TabIndex = 12;
             this.btnMais.Text = "+";
             this.btnMais.UseVisualStyleBackColor = true;
+            this.btnMais.Click += new System.EventHandler(this.btnMais_Click);
             // 
             // btnMult
             // 
@@ -188,6 +201,7 @@
             this.btnMult.TabIndex = 13;
             this.btnMult.Text = "*";
             this.btnMult.UseVisualStyleBackColor = true;
+            this.btnMult.Click += new System.EventHandler(this.btnMult_Click);
             // 
             // btnMenos
             // 
@@ -198,6 +212,7 @@
             this.btnMenos.TabIndex = 14;
             this.btnMenos.Text = "-";
             this.btnMenos.UseVisualStyleBackColor = true;
+            this.btnMenos.Click += new System.EventHandler(this.btnMenos_Click);
             // 
             // btnDiv
             // 
@@ -208,6 +223,7 @@
             this.btnDiv.TabIndex = 15;
             this.btnDiv.Text = "/";
             this.btnDiv.UseVisualStyleBackColor = true;
+            this.btnDiv.Click += new System.EventHandler(this.btnDiv_Click);
             // 
             // btnApagar1
             // 
@@ -218,6 +234,7 @@
             this.btnApagar1.TabIndex = 16;
             this.btnApagar1.Text = "C";
             this.btnApagar1.UseVisualStyleBackColor = true;
+            this.btnApagar1.Click += new System.EventHandler(this.btnApagar1_Click);
             // 
             // btnApagarTudo
             // 
@@ -228,21 +245,23 @@
             this.btnApagarTudo.TabIndex = 17;
             this.btnApagarTudo.Text = "CE";
             this.btnApagarTudo.UseVisualStyleBackColor = true;
+            this.btnApagarTudo.Click += new System.EventHandler(this.btnApagarTudo_Click);
             // 
-            // textBox1
+            // visor
             // 
-            this.textBox1.Location = new System.Drawing.Point(5, 11);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(328, 50);
-            this.textBox1.TabIndex = 18;
+            this.visor.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.visor.Location = new System.Drawing.Point(5, 11);
+            this.visor.Multiline = true;
+            this.visor.Name = "visor";
+            this.visor.Size = new System.Drawing.Size(328, 50);
+            this.visor.TabIndex = 18;
             // 
             // Calculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 334);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.visor);
             this.Controls.Add(this.btnApagarTudo);
             this.Controls.Add(this.btnApagar1);
             this.Controls.Add(this.btnDiv);
@@ -288,7 +307,7 @@
         private System.Windows.Forms.Button btnDiv;
         private System.Windows.Forms.Button btnApagar1;
         private System.Windows.Forms.Button btnApagarTudo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox visor;
     }
 }
 

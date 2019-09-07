@@ -71,7 +71,7 @@ namespace Calculadora2
 
         private void btnVigula_Click(object sender, EventArgs e)
         {
-            visor.Text = visor.Text + ".";
+            visor.Text = visor.Text + ",";
         }
 
         private void btnApagarTudo_Click(object sender, EventArgs e)

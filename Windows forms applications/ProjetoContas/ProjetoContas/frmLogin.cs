@@ -16,5 +16,19 @@ namespace ProjetoContas
         {
             InitializeComponent();
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            if(txtLogin.Text == "adm" && txtSenha.Text == "123")
+            {
+                frmPrincipal fp = new frmPrincipal();
+                fp.Show();
+            }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

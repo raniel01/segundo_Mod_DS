@@ -22,5 +22,11 @@ namespace ProjetoContas
             frmUsuario fp = new frmUsuario();
             fp.Show();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCliente fp = new frmCliente();
+            fp.Show();
+        }
     }
 }

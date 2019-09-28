@@ -47,7 +47,6 @@
             this.contasDataSet = new ProjetoContas.contasDataSet();
             this.tbUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbUsuarioTableAdapter = new ProjetoContas.contasDataSetTableAdapters.tbUsuarioTableAdapter();
-            this.tableAdapterManager = new ProjetoContas.contasDataSetTableAdapters.TableAdapterManager();
             this.cd_usuarioTextBox = new System.Windows.Forms.TextBox();
             this.nm_usuarioTextBox = new System.Windows.Forms.TextBox();
             this.sg_nivelTextBox = new System.Windows.Forms.TextBox();
@@ -120,6 +119,7 @@
             this.btnAnterior.TabIndex = 0;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnProximo
             // 
@@ -129,6 +129,7 @@
             this.btnProximo.TabIndex = 1;
             this.btnProximo.Text = "Próximo";
             this.btnProximo.UseVisualStyleBackColor = true;
+            this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
             // btnNovo
             // 
@@ -138,6 +139,7 @@
             this.btnNovo.TabIndex = 2;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnAlterar
             // 
@@ -147,6 +149,7 @@
             this.btnAlterar.TabIndex = 3;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnExcluir
             // 
@@ -166,6 +169,7 @@
             this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -185,6 +189,7 @@
             this.btnPesquisar.TabIndex = 7;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnImprimir
             // 
@@ -203,6 +208,7 @@
             this.btnSair.TabIndex = 9;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // contasDataSet
             // 
@@ -217,16 +223,6 @@
             // tbUsuarioTableAdapter
             // 
             this.tbUsuarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.tbClienteTableAdapter = null;
-            this.tableAdapterManager.tbContasPagarTableAdapter = null;
-            this.tableAdapterManager.tbContasReceberTableAdapter = null;
-            this.tableAdapterManager.tbFornecedorTableAdapter = null;
-            this.tableAdapterManager.tbUsuarioTableAdapter = this.tbUsuarioTableAdapter;
-            this.tableAdapterManager.UpdateOrder = ProjetoContas.contasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // cd_usuarioTextBox
             // 
@@ -272,7 +268,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 257);
+            this.ClientSize = new System.Drawing.Size(442, 264);
             this.Controls.Add(cd_usuarioLabel);
             this.Controls.Add(this.cd_usuarioTextBox);
             this.Controls.Add(nm_usuarioLabel);
@@ -317,7 +313,6 @@
         private contasDataSet contasDataSet;
         private System.Windows.Forms.BindingSource tbUsuarioBindingSource;
         private contasDataSetTableAdapters.tbUsuarioTableAdapter tbUsuarioTableAdapter;
-        private contasDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox cd_usuarioTextBox;
         private System.Windows.Forms.TextBox nm_usuarioTextBox;
         private System.Windows.Forms.TextBox sg_nivelTextBox;

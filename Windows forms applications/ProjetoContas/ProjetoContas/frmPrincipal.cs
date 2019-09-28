@@ -19,7 +19,8 @@ namespace ProjetoContas
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmUsuario fp = new frmUsuario();
+            fp.Show();
         }
     }
 }

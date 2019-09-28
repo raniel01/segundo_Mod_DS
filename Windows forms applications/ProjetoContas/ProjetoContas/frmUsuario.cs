@@ -17,11 +17,13 @@ namespace ProjetoContas
             cd_usuarioTextBox.Enabled = false;
             nm_usuarioTextBox.Enabled = true;
             sg_nivelTextBox.Enabled = true;
+            nm_loginTextBox.Enabled = true;
             nm_usuarioTextBox.Enabled = true;
             ds_senhaTextBox.Enabled = true;
             btnSalvar.Enabled = true;
-            btnCancelar.Enabled = false;
+            btnCancelar.Enabled = true;
             btnAnterior.Enabled = false;
+            btnProximo.Enabled = false;
             btnNovo.Enabled = false;
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
@@ -33,18 +35,20 @@ namespace ProjetoContas
         {
             cd_usuarioTextBox.Enabled = false;
             nm_usuarioTextBox.Enabled = false;
-            sg_nivelTextBox.Enabled = true;
-            nm_usuarioTextBox.Enabled = true;
-            ds_senhaTextBox.Enabled = true;
-            btnSalvar.Enabled = true;
+            sg_nivelTextBox.Enabled = false;
+            nm_loginTextBox.Enabled = false;
+            nm_usuarioTextBox.Enabled = false;
+            ds_senhaTextBox.Enabled = false;
+            btnSalvar.Enabled = false;
             btnCancelar.Enabled = false;
-            btnAnterior.Enabled = false;
-            btnNovo.Enabled = false;
-            btnAlterar.Enabled = false;
-            btnExcluir.Enabled = false;
-            btnPesquisar.Enabled = false;
-            btnImprimir.Enabled = false;
-            btnSair.Enabled = false;
+            btnAnterior.Enabled = true;
+            btnProximo.Enabled = true;
+            btnNovo.Enabled = true;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
+            btnPesquisar.Enabled = true;
+            btnImprimir.Enabled = true;
+            btnSair.Enabled = true;
         }
 
         
@@ -52,13 +56,11 @@ namespace ProjetoContas
         public frmUsuario()
         {
             InitializeComponent();
+            Desabilitar();
         }
 
         private void tbUsuarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.tbUsuarioBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.contasDataSet);
 
         }
 
@@ -79,6 +81,52 @@ namespace ProjetoContas
         {
             tbUsuarioBindingSource.CancelEdit();
             Desabilitar();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            tbUsuarioBindingSource.AddNew();
+            Habilita();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Validate();
+            tbUsuarioBindingSource.EndEdit();
+            tbUsuarioTableAdapter.Update(contasDataSet.tbUsuario);
+            Desabilitar();
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            tbUsuarioBindingSource.MovePrevious();
+        }
+
+        private void btnProximo_Click(object sender, EventArgs e)
+        {
+            tbUsuarioBindingSource.MoveNext();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (tbUsuarioBindingSource.Count > 0)
+            {
+                Habilita();
+            }
+            else
+            {
+                MessageBox.Show("Não há registros para alterar!");
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

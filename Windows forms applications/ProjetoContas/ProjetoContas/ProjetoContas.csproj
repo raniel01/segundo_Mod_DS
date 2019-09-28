@@ -65,6 +65,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>contasDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="contasDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>contasDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +118,17 @@
     </None>
     <None Include="contasDataSet.xss">
       <DependentUpon>contasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="contasDataSet1.xsc">
+      <DependentUpon>contasDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="contasDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>contasDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="contasDataSet1.xss">
+      <DependentUpon>contasDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

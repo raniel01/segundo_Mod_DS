@@ -14,12 +14,15 @@ namespace ProjetoContas
     {
         private void Habilita()
         {
+            //textbox
             cd_usuarioTextBox.Enabled = false;
             nm_usuarioTextBox.Enabled = true;
             sg_nivelTextBox.Enabled = true;
             nm_loginTextBox.Enabled = true;
             nm_usuarioTextBox.Enabled = true;
             ds_senhaTextBox.Enabled = true;
+
+            //butons
             btnSalvar.Enabled = true;
             btnCancelar.Enabled = true;
             btnAnterior.Enabled = false;
@@ -33,12 +36,15 @@ namespace ProjetoContas
         } 
         private void Desabilitar()
         {
+            //textbox
             cd_usuarioTextBox.Enabled = false;
             nm_usuarioTextBox.Enabled = false;
             sg_nivelTextBox.Enabled = false;
             nm_loginTextBox.Enabled = false;
             nm_usuarioTextBox.Enabled = false;
             ds_senhaTextBox.Enabled = false;
+
+            //buttons
             btnSalvar.Enabled = false;
             btnCancelar.Enabled = false;
             btnAnterior.Enabled = true;
@@ -125,6 +131,11 @@ namespace ProjetoContas
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmUsuario_Load(object sender, EventArgs e)
         {
 
         }

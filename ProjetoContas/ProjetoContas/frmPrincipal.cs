@@ -28,5 +28,22 @@ namespace ProjetoContas
             frmCliente fp = new frmCliente();
             fp.Show();
         }
+
+        private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFornecedor fp = new frmFornecedor();
+            fp.Show();
+        }
+
+        private void contasAReceberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmContasPagar fp = new frmContasPagar();
+            fp.Show();
+        }
+
+        private void sAIRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

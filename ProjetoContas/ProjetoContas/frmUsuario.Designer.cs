@@ -52,6 +52,8 @@
             this.sg_nivelTextBox = new System.Windows.Forms.TextBox();
             this.nm_loginTextBox = new System.Windows.Forms.TextBox();
             this.ds_senhaTextBox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             cd_usuarioLabel = new System.Windows.Forms.Label();
             nm_usuarioLabel = new System.Windows.Forms.Label();
             sg_nivelLabel = new System.Windows.Forms.Label();
@@ -65,7 +67,7 @@
             // 
             cd_usuarioLabel.AutoSize = true;
             cd_usuarioLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cd_usuarioLabel.Location = new System.Drawing.Point(29, 34);
+            cd_usuarioLabel.Location = new System.Drawing.Point(29, 79);
             cd_usuarioLabel.Name = "cd_usuarioLabel";
             cd_usuarioLabel.Size = new System.Drawing.Size(90, 20);
             cd_usuarioLabel.TabIndex = 10;
@@ -75,7 +77,7 @@
             // 
             nm_usuarioLabel.AutoSize = true;
             nm_usuarioLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nm_usuarioLabel.Location = new System.Drawing.Point(29, 58);
+            nm_usuarioLabel.Location = new System.Drawing.Point(29, 103);
             nm_usuarioLabel.Name = "nm_usuarioLabel";
             nm_usuarioLabel.Size = new System.Drawing.Size(65, 20);
             nm_usuarioLabel.TabIndex = 12;
@@ -85,7 +87,7 @@
             // 
             sg_nivelLabel.AutoSize = true;
             sg_nivelLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sg_nivelLabel.Location = new System.Drawing.Point(29, 84);
+            sg_nivelLabel.Location = new System.Drawing.Point(29, 129);
             sg_nivelLabel.Name = "sg_nivelLabel";
             sg_nivelLabel.Size = new System.Drawing.Size(44, 20);
             sg_nivelLabel.TabIndex = 14;
@@ -95,7 +97,7 @@
             // 
             nm_loginLabel.AutoSize = true;
             nm_loginLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nm_loginLabel.Location = new System.Drawing.Point(29, 110);
+            nm_loginLabel.Location = new System.Drawing.Point(29, 155);
             nm_loginLabel.Name = "nm_loginLabel";
             nm_loginLabel.Size = new System.Drawing.Size(49, 20);
             nm_loginLabel.TabIndex = 16;
@@ -105,7 +107,7 @@
             // 
             ds_senhaLabel.AutoSize = true;
             ds_senhaLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ds_senhaLabel.Location = new System.Drawing.Point(29, 136);
+            ds_senhaLabel.Location = new System.Drawing.Point(29, 181);
             ds_senhaLabel.Name = "ds_senhaLabel";
             ds_senhaLabel.Size = new System.Drawing.Size(52, 20);
             ds_senhaLabel.TabIndex = 18;
@@ -113,7 +115,7 @@
             // 
             // btnAnterior
             // 
-            this.btnAnterior.Location = new System.Drawing.Point(19, 191);
+            this.btnAnterior.Location = new System.Drawing.Point(19, 236);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(75, 23);
             this.btnAnterior.TabIndex = 0;
@@ -123,7 +125,7 @@
             // 
             // btnProximo
             // 
-            this.btnProximo.Location = new System.Drawing.Point(101, 190);
+            this.btnProximo.Location = new System.Drawing.Point(101, 235);
             this.btnProximo.Name = "btnProximo";
             this.btnProximo.Size = new System.Drawing.Size(75, 23);
             this.btnProximo.TabIndex = 1;
@@ -133,7 +135,7 @@
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(183, 190);
+            this.btnNovo.Location = new System.Drawing.Point(183, 235);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 23);
             this.btnNovo.TabIndex = 2;
@@ -143,7 +145,7 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(265, 189);
+            this.btnAlterar.Location = new System.Drawing.Point(265, 234);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(75, 23);
             this.btnAlterar.TabIndex = 3;
@@ -153,7 +155,7 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(347, 191);
+            this.btnExcluir.Location = new System.Drawing.Point(347, 234);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 4;
@@ -163,7 +165,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(19, 221);
+            this.btnSalvar.Location = new System.Drawing.Point(19, 266);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 5;
@@ -173,7 +175,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(101, 220);
+            this.btnCancelar.Location = new System.Drawing.Point(101, 265);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 6;
@@ -183,7 +185,7 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(183, 219);
+            this.btnPesquisar.Location = new System.Drawing.Point(183, 264);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisar.TabIndex = 7;
@@ -193,7 +195,7 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(265, 220);
+            this.btnImprimir.Location = new System.Drawing.Point(265, 265);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(75, 23);
             this.btnImprimir.TabIndex = 8;
@@ -202,7 +204,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(347, 218);
+            this.btnSair.Location = new System.Drawing.Point(347, 265);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 9;
@@ -227,7 +229,7 @@
             // cd_usuarioTextBox
             // 
             this.cd_usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "cd_usuario", true));
-            this.cd_usuarioTextBox.Location = new System.Drawing.Point(132, 31);
+            this.cd_usuarioTextBox.Location = new System.Drawing.Point(132, 76);
             this.cd_usuarioTextBox.Name = "cd_usuarioTextBox";
             this.cd_usuarioTextBox.Size = new System.Drawing.Size(100, 20);
             this.cd_usuarioTextBox.TabIndex = 11;
@@ -235,7 +237,7 @@
             // nm_usuarioTextBox
             // 
             this.nm_usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "nm_usuario", true));
-            this.nm_usuarioTextBox.Location = new System.Drawing.Point(132, 57);
+            this.nm_usuarioTextBox.Location = new System.Drawing.Point(132, 102);
             this.nm_usuarioTextBox.Name = "nm_usuarioTextBox";
             this.nm_usuarioTextBox.Size = new System.Drawing.Size(235, 20);
             this.nm_usuarioTextBox.TabIndex = 13;
@@ -243,7 +245,7 @@
             // sg_nivelTextBox
             // 
             this.sg_nivelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "sg_nivel", true));
-            this.sg_nivelTextBox.Location = new System.Drawing.Point(132, 83);
+            this.sg_nivelTextBox.Location = new System.Drawing.Point(132, 128);
             this.sg_nivelTextBox.Name = "sg_nivelTextBox";
             this.sg_nivelTextBox.Size = new System.Drawing.Size(38, 20);
             this.sg_nivelTextBox.TabIndex = 15;
@@ -251,7 +253,7 @@
             // nm_loginTextBox
             // 
             this.nm_loginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "nm_login", true));
-            this.nm_loginTextBox.Location = new System.Drawing.Point(132, 109);
+            this.nm_loginTextBox.Location = new System.Drawing.Point(132, 154);
             this.nm_loginTextBox.Name = "nm_loginTextBox";
             this.nm_loginTextBox.Size = new System.Drawing.Size(143, 20);
             this.nm_loginTextBox.TabIndex = 17;
@@ -259,16 +261,37 @@
             // ds_senhaTextBox
             // 
             this.ds_senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "ds_senha", true));
-            this.ds_senhaTextBox.Location = new System.Drawing.Point(132, 135);
+            this.ds_senhaTextBox.Location = new System.Drawing.Point(132, 180);
             this.ds_senhaTextBox.Name = "ds_senhaTextBox";
             this.ds_senhaTextBox.Size = new System.Drawing.Size(143, 20);
             this.ds_senhaTextBox.TabIndex = 19;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel1.Location = new System.Drawing.Point(-4, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(451, 10);
+            this.panel1.TabIndex = 51;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(139, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(165, 34);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "USUÁRIOS";
             // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 264);
+            this.ClientSize = new System.Drawing.Size(442, 311);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(cd_usuarioLabel);
             this.Controls.Add(this.cd_usuarioTextBox);
             this.Controls.Add(nm_usuarioLabel);
@@ -291,6 +314,7 @@
             this.Controls.Add(this.btnAnterior);
             this.Name = "frmUsuario";
             this.Text = "frmUsuario";
+            this.Load += new System.EventHandler(this.frmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.contasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbUsuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -318,5 +342,7 @@
         private System.Windows.Forms.TextBox sg_nivelTextBox;
         private System.Windows.Forms.TextBox nm_loginTextBox;
         private System.Windows.Forms.TextBox ds_senhaTextBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

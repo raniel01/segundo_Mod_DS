@@ -34,6 +34,10 @@ namespace ProjetoContas {
         
         private tbUsuarioDataTable tabletbUsuario;
         
+        private global::System.Data.DataRelation relationtbCliente_tbContasReceber;
+        
+        private global::System.Data.DataRelation relationtbFornecedor_tbContasPagar;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -290,6 +294,8 @@ namespace ProjetoContas {
                     this.tabletbUsuario.InitVars();
                 }
             }
+            this.relationtbCliente_tbContasReceber = this.Relations["tbCliente_tbContasReceber"];
+            this.relationtbFornecedor_tbContasPagar = this.Relations["tbFornecedor_tbContasPagar"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -310,6 +316,14 @@ namespace ProjetoContas {
             base.Tables.Add(this.tabletbFornecedor);
             this.tabletbUsuario = new tbUsuarioDataTable();
             base.Tables.Add(this.tabletbUsuario);
+            this.relationtbCliente_tbContasReceber = new global::System.Data.DataRelation("tbCliente_tbContasReceber", new global::System.Data.DataColumn[] {
+                        this.tabletbCliente.cd_clienteColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletbContasReceber.id_clienteColumn}, false);
+            this.Relations.Add(this.relationtbCliente_tbContasReceber);
+            this.relationtbFornecedor_tbContasPagar = new global::System.Data.DataRelation("tbFornecedor_tbContasPagar", new global::System.Data.DataColumn[] {
+                        this.tabletbFornecedor.cd_fornecedorColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletbContasPagar.id_fornecedorColumn}, false);
+            this.Relations.Add(this.relationtbFornecedor_tbContasPagar);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1026,17 +1040,20 @@ namespace ProjetoContas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tbContasPagarRow AddtbContasPagarRow(System.DateTime dt_emissao, System.DateTime dt_vencimento, decimal vl_conta, int id_fornecedor, System.DateTime dt_pagamento, decimal vl_pago, string ds_obs) {
+            public tbContasPagarRow AddtbContasPagarRow(System.DateTime dt_emissao, System.DateTime dt_vencimento, decimal vl_conta, tbFornecedorRow parenttbFornecedorRowBytbFornecedor_tbContasPagar, System.DateTime dt_pagamento, decimal vl_pago, string ds_obs) {
                 tbContasPagarRow rowtbContasPagarRow = ((tbContasPagarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         dt_emissao,
                         dt_vencimento,
                         vl_conta,
-                        id_fornecedor,
+                        null,
                         dt_pagamento,
                         vl_pago,
                         ds_obs};
+                if ((parenttbFornecedorRowBytbFornecedor_tbContasPagar != null)) {
+                    columnValuesArray[4] = parenttbFornecedorRowBytbFornecedor_tbContasPagar[0];
+                }
                 rowtbContasPagarRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbContasPagarRow);
                 return rowtbContasPagarRow;
@@ -1387,17 +1404,20 @@ namespace ProjetoContas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tbContasReceberRow AddtbContasReceberRow(System.DateTime dt_emissao, System.DateTime dt_vencimento, decimal vl_conta, int id_cliente, System.DateTime dt_pagamento, decimal vl_pago, string ds_obs) {
+            public tbContasReceberRow AddtbContasReceberRow(System.DateTime dt_emissao, System.DateTime dt_vencimento, decimal vl_conta, tbClienteRow parenttbClienteRowBytbCliente_tbContasReceber, System.DateTime dt_pagamento, decimal vl_pago, string ds_obs) {
                 tbContasReceberRow rowtbContasReceberRow = ((tbContasReceberRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         dt_emissao,
                         dt_vencimento,
                         vl_conta,
-                        id_cliente,
+                        null,
                         dt_pagamento,
                         vl_pago,
                         ds_obs};
+                if ((parenttbClienteRowBytbCliente_tbContasReceber != null)) {
+                    columnValuesArray[4] = parenttbClienteRowBytbCliente_tbContasReceber[0];
+                }
                 rowtbContasReceberRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbContasReceberRow);
                 return rowtbContasReceberRow;
@@ -2758,6 +2778,17 @@ namespace ProjetoContas {
             public void Setcd_ieNull() {
                 this[this.tabletbCliente.cd_ieColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tbContasReceberRow[] GettbContasReceberRows() {
+                if ((this.Table.ChildRelations["tbCliente_tbContasReceber"] == null)) {
+                    return new tbContasReceberRow[0];
+                }
+                else {
+                    return ((tbContasReceberRow[])(base.GetChildRows(this.Table.ChildRelations["tbCliente_tbContasReceber"])));
+                }
+            }
         }
         
         /// <summary>
@@ -2894,6 +2925,17 @@ namespace ProjetoContas {
                 }
                 set {
                     this[this.tabletbContasPagar.ds_obsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tbFornecedorRow tbFornecedorRow {
+                get {
+                    return ((tbFornecedorRow)(this.GetParentRow(this.Table.ParentRelations["tbFornecedor_tbContasPagar"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["tbFornecedor_tbContasPagar"]);
                 }
             }
             
@@ -3116,6 +3158,17 @@ namespace ProjetoContas {
                 }
                 set {
                     this[this.tabletbContasReceber.ds_obsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tbClienteRow tbClienteRow {
+                get {
+                    return ((tbClienteRow)(this.GetParentRow(this.Table.ParentRelations["tbCliente_tbContasReceber"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["tbCliente_tbContasReceber"]);
                 }
             }
             
@@ -3591,6 +3644,17 @@ namespace ProjetoContas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setcd_ieNull() {
                 this[this.tabletbFornecedor.cd_ieColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tbContasPagarRow[] GettbContasPagarRows() {
+                if ((this.Table.ChildRelations["tbFornecedor_tbContasPagar"] == null)) {
+                    return new tbContasPagarRow[0];
+                }
+                else {
+                    return ((tbContasPagarRow[])(base.GetChildRows(this.Table.ChildRelations["tbFornecedor_tbContasPagar"])));
+                }
             }
         }
         
@@ -7266,6 +7330,15 @@ SELECT cd_usuario, nm_usuario, sg_nivel, nm_login, ds_senha FROM tbUsuario WHERE
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._tbFornecedorTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tbFornecedor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tbFornecedorTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._tbContasPagarTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tbContasPagar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -7281,15 +7354,6 @@ SELECT cd_usuario, nm_usuario, sg_nivel, nm_login, ds_senha FROM tbUsuario WHERE
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tbContasReceberTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tbFornecedorTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tbFornecedor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tbFornecedorTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -7320,6 +7384,14 @@ SELECT cd_usuario, nm_usuario, sg_nivel, nm_login, ds_senha FROM tbUsuario WHERE
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._tbFornecedorTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tbFornecedor.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tbFornecedorTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._tbContasPagarTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tbContasPagar.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -7333,14 +7405,6 @@ SELECT cd_usuario, nm_usuario, sg_nivel, nm_login, ds_senha FROM tbUsuario WHERE
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tbContasReceberTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tbFornecedorTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tbFornecedor.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tbFornecedorTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -7370,14 +7434,6 @@ SELECT cd_usuario, nm_usuario, sg_nivel, nm_login, ds_senha FROM tbUsuario WHERE
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tbFornecedorTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tbFornecedor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tbFornecedorTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._tbContasReceberTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tbContasReceber.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -7391,6 +7447,14 @@ SELECT cd_usuario, nm_usuario, sg_nivel, nm_login, ds_senha FROM tbUsuario WHERE
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tbContasPagarTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tbFornecedorTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tbFornecedor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tbFornecedorTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

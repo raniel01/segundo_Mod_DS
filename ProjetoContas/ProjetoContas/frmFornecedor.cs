@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace ProjetoContas
 {
-    public partial class frmCliente : Form
+    public partial class frmFornecedor : Form
     {
         private void Habilita()
         {
             //textbox
-            cd_clienteTextBox.Enabled = false;
-            nm_clienteTextBox.Enabled = true;
+            cd_fornecedorTextBox.Enabled = false;
+            nm_fornecedorTextBox.Enabled = true;
             ds_enderecoTextBox.Enabled = true;
             nm_bairroTextBox.Enabled = true;
             nm_cidadeTextBox.Enabled = true;
@@ -29,7 +29,7 @@ namespace ProjetoContas
             cd_cnpjTextBox.Enabled = true;
             cd_rgTextBox.Enabled = true;
             cd_ieTextBox.Enabled = true;
-            
+
             //buttons
             btnSalvar.Enabled = true;
             btnCancelar.Enabled = true;
@@ -45,8 +45,8 @@ namespace ProjetoContas
         public void Desabilitar()
         {
             //textbox
-            cd_clienteTextBox.Enabled = false;
-            nm_clienteTextBox.Enabled = false;
+            cd_fornecedorTextBox.Enabled = false;
+            nm_fornecedorTextBox.Enabled = false;
             ds_enderecoTextBox.Enabled = false;
             nm_bairroTextBox.Enabled = false;
             nm_cidadeTextBox.Enabled = false;
@@ -72,60 +72,46 @@ namespace ProjetoContas
             btnImprimir.Enabled = true;
             btnSair.Enabled = true;
         }
-        public frmCliente()
+        public frmFornecedor()
         {
             InitializeComponent();
             Desabilitar();
         }
 
-        private void tbClienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void tbFornecedorBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.tbClienteBindingSource.EndEdit();
+            this.tbFornecedorBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.contasDataSet1);
 
         }
 
-        private void tbClienteBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        private void frmFornecedor_Load(object sender, EventArgs e)
         {
-            this.Validate();
-            this.tbClienteBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.contasDataSet1);
-
-        }
-
-        private void tbClienteBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.tbClienteBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.contasDataSet1);
-
-        }
-
-        private void ds_telefoneTextBox_TextChanged(object sender, EventArgs e)
-        {
+            // TODO: esta linha de código carrega dados na tabela 'contasDataSet1.tbFornecedor'. Você pode movê-la ou removê-la conforme necessário.
+            this.tbFornecedorTableAdapter.Fill(this.contasDataSet1.tbFornecedor);
 
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            tbClienteBindingSource.MovePrevious();
+            tbFornecedorBindingSource.MovePrevious();
         }
 
         private void btnProximo_Click(object sender, EventArgs e)
         {
-            tbClienteBindingSource.MoveNext();
+            tbFornecedorBindingSource.MoveNext();
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            tbClienteBindingSource.AddNew();
+            tbFornecedorBindingSource.AddNew();
             Habilita();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (tbClienteBindingSource.Count > 0)
+            if (tbFornecedorBindingSource.Count > 0)
             {
                 Habilita();
             }
@@ -137,10 +123,10 @@ namespace ProjetoContas
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (tbClienteBindingSource.Count > 0)
+            if (tbFornecedorBindingSource.Count > 0)
             {
-                tbClienteBindingSource.RemoveCurrent();
-                tbClienteTableAdapter.Update(contasDataSet1.tbCliente);
+                tbFornecedorBindingSource.RemoveCurrent();
+                tbFornecedorTableAdapter.Update(contasDataSet1.tbFornecedor);
             }
             else
             {
@@ -151,15 +137,15 @@ namespace ProjetoContas
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Validate();
-            tbClienteBindingSource.EndEdit();
-            tbClienteTableAdapter.Update(contasDataSet1.tbCliente);
+            tbFornecedorBindingSource.EndEdit();
+            tbFornecedorTableAdapter.Update(contasDataSet1.tbFornecedor);
             Desabilitar();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-           tbClienteBindingSource.CancelEdit();
-           Desabilitar();
+            tbFornecedorBindingSource.CancelEdit();
+            Desabilitar();
         }
 
         private void btnSair_Click(object sender, EventArgs e)

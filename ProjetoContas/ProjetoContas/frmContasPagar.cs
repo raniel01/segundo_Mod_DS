@@ -63,6 +63,8 @@ namespace ProjetoContas
         public frmContasPagar()
         {
             InitializeComponent();
+            Desabilitar();
+            
         }
 
         private void tbContasPagarBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -108,6 +110,66 @@ namespace ProjetoContas
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnProximo_Click(object sender, EventArgs e)
+        {
+            tbContasPagarBindingSource.MoveNext();
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            tbContasPagarBindingSource.MovePrevious();
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            tbContasPagarBindingSource.AddNew();
+            Habilita();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if(tbContasPagarBindingSource.Count > 0)
+            {
+                Habilita();
+            }
+            else
+            {
+                MessageBox.Show("Não há registros para alterar!");
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (tbContasPagarBindingSource.Count > 0)
+            {
+                tbContasPagarBindingSource.RemoveCurrent();
+                tbContasPagarTableAdapter.Update(contasDataSet1.tbContasPagar);
+            }
+            else
+            {
+                MessageBox.Show("Não há registros a excluir!");
+            }
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Validate();
+            tbContasPagarBindingSource.EndEdit();
+            tbContasPagarTableAdapter.Update(contasDataSet1.tbContasPagar);
+            Desabilitar();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            tbContasPagarBindingSource.CancelEdit();
+            Desabilitar();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

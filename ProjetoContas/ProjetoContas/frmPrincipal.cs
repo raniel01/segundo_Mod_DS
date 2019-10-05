@@ -15,12 +15,14 @@ namespace ProjetoContas
         public frmPrincipal()
         {
             InitializeComponent();
+            
         }
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmUsuario fp = new frmUsuario();
             fp.Show();
+
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,13 +39,19 @@ namespace ProjetoContas
 
         private void contasAReceberToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmContasPagar fp = new frmContasPagar();
+            frmContasReceber fp = new frmContasReceber();
             fp.Show();
         }
 
         private void sAIRToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void contasAPagarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmContasPagar fp = new frmContasPagar();
+            fp.Show();
         }
     }
 }

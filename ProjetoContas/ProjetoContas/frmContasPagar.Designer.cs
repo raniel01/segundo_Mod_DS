@@ -139,7 +139,7 @@
             // 
             vl_pagoLabel.AutoSize = true;
             vl_pagoLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            vl_pagoLabel.Location = new System.Drawing.Point(404, 121);
+            vl_pagoLabel.Location = new System.Drawing.Point(404, 149);
             vl_pagoLabel.Name = "vl_pagoLabel";
             vl_pagoLabel.Size = new System.Drawing.Size(81, 20);
             vl_pagoLabel.TabIndex = 13;
@@ -212,6 +212,7 @@
             this.vl_contaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbContasPagarBindingSource, "vl_conta", true));
             this.vl_contaTextBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vl_contaTextBox.Location = new System.Drawing.Point(519, 96);
+            this.vl_contaTextBox.MaxLength = 15;
             this.vl_contaTextBox.Name = "vl_contaTextBox";
             this.vl_contaTextBox.Size = new System.Drawing.Size(200, 22);
             this.vl_contaTextBox.TabIndex = 8;
@@ -221,6 +222,7 @@
             this.id_fornecedorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbContasPagarBindingSource, "id_fornecedor", true));
             this.id_fornecedorTextBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.id_fornecedorTextBox.Location = new System.Drawing.Point(266, 67);
+            this.id_fornecedorTextBox.MaxLength = 50;
             this.id_fornecedorTextBox.Name = "id_fornecedorTextBox";
             this.id_fornecedorTextBox.Size = new System.Drawing.Size(453, 22);
             this.id_fornecedorTextBox.TabIndex = 10;
@@ -238,7 +240,8 @@
             // 
             this.vl_pagoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbContasPagarBindingSource, "vl_pago", true));
             this.vl_pagoTextBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vl_pagoTextBox.Location = new System.Drawing.Point(491, 121);
+            this.vl_pagoTextBox.Location = new System.Drawing.Point(491, 149);
+            this.vl_pagoTextBox.MaxLength = 15;
             this.vl_pagoTextBox.Name = "vl_pagoTextBox";
             this.vl_pagoTextBox.Size = new System.Drawing.Size(228, 22);
             this.vl_pagoTextBox.TabIndex = 14;
@@ -249,6 +252,7 @@
             this.ds_obsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbContasPagarBindingSource, "ds_obs", true));
             this.ds_obsTextBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ds_obsTextBox.Location = new System.Drawing.Point(60, 175);
+            this.ds_obsTextBox.MaxLength = 200;
             this.ds_obsTextBox.Multiline = true;
             this.ds_obsTextBox.Name = "ds_obsTextBox";
             this.ds_obsTextBox.Size = new System.Drawing.Size(337, 145);
@@ -283,6 +287,7 @@
             this.btnSair.TabIndex = 61;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnImprimir
             // 
@@ -310,6 +315,7 @@
             this.btnCancelar.TabIndex = 58;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -319,6 +325,7 @@
             this.btnSalvar.TabIndex = 57;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnExcluir
             // 
@@ -328,6 +335,7 @@
             this.btnExcluir.TabIndex = 56;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -337,6 +345,7 @@
             this.btnAlterar.TabIndex = 55;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
@@ -346,6 +355,7 @@
             this.btnNovo.TabIndex = 54;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnProximo
             // 
@@ -355,6 +365,7 @@
             this.btnProximo.TabIndex = 53;
             this.btnProximo.Text = "Próximo";
             this.btnProximo.UseVisualStyleBackColor = true;
+            this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
             // 
             // btnAnterior
             // 
@@ -364,6 +375,7 @@
             this.btnAnterior.TabIndex = 52;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // frmContasPagar
             // 

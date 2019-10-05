@@ -107,6 +107,7 @@
             this.contasAPagarToolStripMenuItem.Name = "contasAPagarToolStripMenuItem";
             this.contasAPagarToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
             this.contasAPagarToolStripMenuItem.Text = "Contas a Pagar";
+            this.contasAPagarToolStripMenuItem.Click += new System.EventHandler(this.contasAPagarToolStripMenuItem_Click);
             // 
             // rELATÓRIOSToolStripMenuItem
             // 

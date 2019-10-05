@@ -255,6 +255,7 @@
             this.nm_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "nm_cliente", true));
             this.nm_clienteTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nm_clienteTextBox.Location = new System.Drawing.Point(259, 70);
+            this.nm_clienteTextBox.MaxLength = 50;
             this.nm_clienteTextBox.Name = "nm_clienteTextBox";
             this.nm_clienteTextBox.Size = new System.Drawing.Size(363, 26);
             this.nm_clienteTextBox.TabIndex = 3;
@@ -264,6 +265,7 @@
             this.ds_enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "ds_endereco", true));
             this.ds_enderecoTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ds_enderecoTextBox.Location = new System.Drawing.Point(88, 102);
+            this.ds_enderecoTextBox.MaxLength = 50;
             this.ds_enderecoTextBox.Name = "ds_enderecoTextBox";
             this.ds_enderecoTextBox.Size = new System.Drawing.Size(533, 26);
             this.ds_enderecoTextBox.TabIndex = 5;
@@ -273,6 +275,7 @@
             this.nm_cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "nm_cidade", true));
             this.nm_cidadeTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nm_cidadeTextBox.Location = new System.Drawing.Point(317, 135);
+            this.nm_cidadeTextBox.MaxLength = 35;
             this.nm_cidadeTextBox.Name = "nm_cidadeTextBox";
             this.nm_cidadeTextBox.Size = new System.Drawing.Size(184, 26);
             this.nm_cidadeTextBox.TabIndex = 7;
@@ -282,6 +285,7 @@
             this.nm_bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "nm_bairro", true));
             this.nm_bairroTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nm_bairroTextBox.Location = new System.Drawing.Point(67, 134);
+            this.nm_bairroTextBox.MaxLength = 35;
             this.nm_bairroTextBox.Name = "nm_bairroTextBox";
             this.nm_bairroTextBox.Size = new System.Drawing.Size(182, 26);
             this.nm_bairroTextBox.TabIndex = 9;
@@ -291,6 +295,7 @@
             this.sg_estadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "sg_estado", true));
             this.sg_estadoTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sg_estadoTextBox.Location = new System.Drawing.Point(566, 135);
+            this.sg_estadoTextBox.MaxLength = 2;
             this.sg_estadoTextBox.Name = "sg_estadoTextBox";
             this.sg_estadoTextBox.Size = new System.Drawing.Size(55, 26);
             this.sg_estadoTextBox.TabIndex = 11;
@@ -300,6 +305,7 @@
             this.cd_cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_cep", true));
             this.cd_cepTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cd_cepTextBox.Location = new System.Drawing.Point(55, 166);
+            this.cd_cepTextBox.MaxLength = 9;
             this.cd_cepTextBox.Name = "cd_cepTextBox";
             this.cd_cepTextBox.Size = new System.Drawing.Size(194, 26);
             this.cd_cepTextBox.TabIndex = 13;
@@ -309,6 +315,7 @@
             this.ds_telefoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "ds_telefone", true));
             this.ds_telefoneTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ds_telefoneTextBox.Location = new System.Drawing.Point(327, 166);
+            this.ds_telefoneTextBox.MaxLength = 20;
             this.ds_telefoneTextBox.Name = "ds_telefoneTextBox";
             this.ds_telefoneTextBox.Size = new System.Drawing.Size(174, 26);
             this.ds_telefoneTextBox.TabIndex = 15;
@@ -319,6 +326,7 @@
             this.ds_emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "ds_email", true));
             this.ds_emailTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ds_emailTextBox.Location = new System.Drawing.Point(67, 199);
+            this.ds_emailTextBox.MaxLength = 100;
             this.ds_emailTextBox.Name = "ds_emailTextBox";
             this.ds_emailTextBox.Size = new System.Drawing.Size(434, 26);
             this.ds_emailTextBox.TabIndex = 17;
@@ -328,6 +336,7 @@
             this.sg_tipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "sg_tipo", true));
             this.sg_tipoTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sg_tipoTextBox.Location = new System.Drawing.Point(554, 199);
+            this.sg_tipoTextBox.MaxLength = 1;
             this.sg_tipoTextBox.Name = "sg_tipoTextBox";
             this.sg_tipoTextBox.Size = new System.Drawing.Size(69, 26);
             this.sg_tipoTextBox.TabIndex = 19;
@@ -337,6 +346,7 @@
             this.cd_cpfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_cpf", true));
             this.cd_cpfTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cd_cpfTextBox.Location = new System.Drawing.Point(54, 231);
+            this.cd_cpfTextBox.MaxLength = 14;
             this.cd_cpfTextBox.Name = "cd_cpfTextBox";
             this.cd_cpfTextBox.Size = new System.Drawing.Size(240, 26);
             this.cd_cpfTextBox.TabIndex = 21;
@@ -346,6 +356,7 @@
             this.cd_cnpjTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_cnpj", true));
             this.cd_cnpjTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cd_cnpjTextBox.Location = new System.Drawing.Point(353, 231);
+            this.cd_cnpjTextBox.MaxLength = 18;
             this.cd_cnpjTextBox.Name = "cd_cnpjTextBox";
             this.cd_cnpjTextBox.Size = new System.Drawing.Size(270, 26);
             this.cd_cnpjTextBox.TabIndex = 23;
@@ -355,6 +366,7 @@
             this.cd_rgTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_rg", true));
             this.cd_rgTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cd_rgTextBox.Location = new System.Drawing.Point(46, 263);
+            this.cd_rgTextBox.MaxLength = 15;
             this.cd_rgTextBox.Name = "cd_rgTextBox";
             this.cd_rgTextBox.Size = new System.Drawing.Size(248, 26);
             this.cd_rgTextBox.TabIndex = 25;
@@ -364,6 +376,7 @@
             this.cd_ieTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbClienteBindingSource, "cd_ie", true));
             this.cd_ieTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cd_ieTextBox.Location = new System.Drawing.Point(332, 266);
+            this.cd_ieTextBox.MaxLength = 15;
             this.cd_ieTextBox.Name = "cd_ieTextBox";
             this.cd_ieTextBox.Size = new System.Drawing.Size(289, 26);
             this.cd_ieTextBox.TabIndex = 27;
@@ -504,6 +517,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 388);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSair);

@@ -31,5 +31,30 @@ namespace ProjetoContas
             this.tbContasPagarTableAdapter.Fill(this.contasDataSet1.tbContasPagar);
 
         }
+
+        private void cd_contaLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dt_vencimentoLabel_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void vl_pagoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vl_pagoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ds_obsTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

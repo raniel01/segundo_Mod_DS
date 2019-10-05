@@ -229,41 +229,50 @@
             // cd_usuarioTextBox
             // 
             this.cd_usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "cd_usuario", true));
+            this.cd_usuarioTextBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cd_usuarioTextBox.Location = new System.Drawing.Point(132, 76);
             this.cd_usuarioTextBox.Name = "cd_usuarioTextBox";
-            this.cd_usuarioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cd_usuarioTextBox.Size = new System.Drawing.Size(100, 22);
             this.cd_usuarioTextBox.TabIndex = 11;
             // 
             // nm_usuarioTextBox
             // 
             this.nm_usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "nm_usuario", true));
+            this.nm_usuarioTextBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nm_usuarioTextBox.Location = new System.Drawing.Point(132, 102);
+            this.nm_usuarioTextBox.MaxLength = 50;
             this.nm_usuarioTextBox.Name = "nm_usuarioTextBox";
-            this.nm_usuarioTextBox.Size = new System.Drawing.Size(235, 20);
+            this.nm_usuarioTextBox.Size = new System.Drawing.Size(235, 22);
             this.nm_usuarioTextBox.TabIndex = 13;
             // 
             // sg_nivelTextBox
             // 
             this.sg_nivelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "sg_nivel", true));
+            this.sg_nivelTextBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sg_nivelTextBox.Location = new System.Drawing.Point(132, 128);
+            this.sg_nivelTextBox.MaxLength = 1;
             this.sg_nivelTextBox.Name = "sg_nivelTextBox";
-            this.sg_nivelTextBox.Size = new System.Drawing.Size(38, 20);
+            this.sg_nivelTextBox.Size = new System.Drawing.Size(38, 22);
             this.sg_nivelTextBox.TabIndex = 15;
             // 
             // nm_loginTextBox
             // 
             this.nm_loginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "nm_login", true));
+            this.nm_loginTextBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nm_loginTextBox.Location = new System.Drawing.Point(132, 154);
+            this.nm_loginTextBox.MaxLength = 15;
             this.nm_loginTextBox.Name = "nm_loginTextBox";
-            this.nm_loginTextBox.Size = new System.Drawing.Size(143, 20);
+            this.nm_loginTextBox.Size = new System.Drawing.Size(143, 22);
             this.nm_loginTextBox.TabIndex = 17;
             // 
             // ds_senhaTextBox
             // 
             this.ds_senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbUsuarioBindingSource, "ds_senha", true));
+            this.ds_senhaTextBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ds_senhaTextBox.Location = new System.Drawing.Point(132, 180);
+            this.ds_senhaTextBox.MaxLength = 15;
             this.ds_senhaTextBox.Name = "ds_senhaTextBox";
-            this.ds_senhaTextBox.Size = new System.Drawing.Size(143, 20);
+            this.ds_senhaTextBox.Size = new System.Drawing.Size(143, 22);
             this.ds_senhaTextBox.TabIndex = 19;
             // 
             // panel1
@@ -290,6 +299,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 311);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(cd_usuarioLabel);

@@ -12,6 +12,54 @@ namespace ProjetoContas
 {
     public partial class frmContasPagar : Form
     {
+        private void Habilita()
+        {
+            //textbox
+            cd_contaTextBox.Enabled = false;
+            id_fornecedorTextBox.Enabled = true;
+            dt_emissaoDateTimePicker.Enabled = true;
+            dt_vencimentoDateTimePicker.Enabled = true;
+            dt_pagamentoDateTimePicker.Enabled = true;
+            vl_contaTextBox.Enabled = true;
+            vl_pagoTextBox.Enabled = true;
+            ds_obsTextBox.Enabled = true;
+            
+            //buttons
+            btnSalvar.Enabled = true;
+            btnCancelar.Enabled = true;
+            btnAnterior.Enabled = false;
+            btnProximo.Enabled = false;
+            btnNovo.Enabled = false;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
+            btnPesquisar.Enabled = false;
+            btnImprimir.Enabled = false;
+            btnSair.Enabled = false;
+        }
+        public void Desabilitar()
+        {
+            //textbox
+            cd_contaTextBox.Enabled = false;
+            id_fornecedorTextBox.Enabled = false;
+            dt_emissaoDateTimePicker.Enabled = false;
+            dt_vencimentoDateTimePicker.Enabled = false;
+            dt_pagamentoDateTimePicker.Enabled = false;
+            vl_contaTextBox.Enabled = false;
+            vl_pagoTextBox.Enabled = false;
+            ds_obsTextBox.Enabled = false;
+
+            //buttons
+            btnSalvar.Enabled = false;
+            btnCancelar.Enabled = false;
+            btnAnterior.Enabled = true;
+            btnProximo.Enabled = true;
+            btnNovo.Enabled = true;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
+            btnPesquisar.Enabled = true;
+            btnImprimir.Enabled = true;
+            btnSair.Enabled = true;
+        }
         public frmContasPagar()
         {
             InitializeComponent();
@@ -53,6 +101,11 @@ namespace ProjetoContas
         }
 
         private void ds_obsTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

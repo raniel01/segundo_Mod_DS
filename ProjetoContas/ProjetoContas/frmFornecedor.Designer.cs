@@ -283,6 +283,7 @@
             this.ds_enderecoTextBox.Name = "ds_enderecoTextBox";
             this.ds_enderecoTextBox.Size = new System.Drawing.Size(564, 26);
             this.ds_enderecoTextBox.TabIndex = 6;
+            this.ds_enderecoTextBox.TextChanged += new System.EventHandler(this.ds_enderecoTextBox_TextChanged);
             // 
             // nm_cidadeTextBox
             // 

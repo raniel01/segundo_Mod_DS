@@ -152,5 +152,10 @@ namespace ProjetoContas
         {
             Close();
         }
+
+        private void ds_enderecoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

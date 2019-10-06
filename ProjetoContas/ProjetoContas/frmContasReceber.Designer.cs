@@ -73,6 +73,86 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbContasReceberBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // cd_contaLabel
+            // 
+            cd_contaLabel.AutoSize = true;
+            cd_contaLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cd_contaLabel.Location = new System.Drawing.Point(12, 61);
+            cd_contaLabel.Name = "cd_contaLabel";
+            cd_contaLabel.Size = new System.Drawing.Size(73, 20);
+            cd_contaLabel.TabIndex = 54;
+            cd_contaLabel.Text = "Cód. onta:";
+            // 
+            // dt_emissaoLabel
+            // 
+            dt_emissaoLabel.AutoSize = true;
+            dt_emissaoLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dt_emissaoLabel.Location = new System.Drawing.Point(12, 89);
+            dt_emissaoLabel.Name = "dt_emissaoLabel";
+            dt_emissaoLabel.Size = new System.Drawing.Size(115, 20);
+            dt_emissaoLabel.TabIndex = 56;
+            dt_emissaoLabel.Text = "Data de emissao:";
+            // 
+            // dt_vencimentoLabel
+            // 
+            dt_vencimentoLabel.AutoSize = true;
+            dt_vencimentoLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dt_vencimentoLabel.Location = new System.Drawing.Point(10, 118);
+            dt_vencimentoLabel.Name = "dt_vencimentoLabel";
+            dt_vencimentoLabel.Size = new System.Drawing.Size(135, 20);
+            dt_vencimentoLabel.TabIndex = 58;
+            dt_vencimentoLabel.Text = "Data de vencimento:";
+            // 
+            // vl_contaLabel
+            // 
+            vl_contaLabel.AutoSize = true;
+            vl_contaLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            vl_contaLabel.Location = new System.Drawing.Point(387, 90);
+            vl_contaLabel.Name = "vl_contaLabel";
+            vl_contaLabel.Size = new System.Drawing.Size(103, 20);
+            vl_contaLabel.TabIndex = 60;
+            vl_contaLabel.Text = "Valor da conta:";
+            // 
+            // id_clienteLabel
+            // 
+            id_clienteLabel.AutoSize = true;
+            id_clienteLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            id_clienteLabel.Location = new System.Drawing.Point(188, 61);
+            id_clienteLabel.Name = "id_clienteLabel";
+            id_clienteLabel.Size = new System.Drawing.Size(56, 20);
+            id_clienteLabel.TabIndex = 62;
+            id_clienteLabel.Text = "Cliente:";
+            // 
+            // dt_pagamentoLabel
+            // 
+            dt_pagamentoLabel.AutoSize = true;
+            dt_pagamentoLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dt_pagamentoLabel.Location = new System.Drawing.Point(13, 147);
+            dt_pagamentoLabel.Name = "dt_pagamentoLabel";
+            dt_pagamentoLabel.Size = new System.Drawing.Size(132, 20);
+            dt_pagamentoLabel.TabIndex = 64;
+            dt_pagamentoLabel.Text = "Data de pagamento:";
+            // 
+            // vl_pagoLabel
+            // 
+            vl_pagoLabel.AutoSize = true;
+            vl_pagoLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            vl_pagoLabel.Location = new System.Drawing.Point(419, 147);
+            vl_pagoLabel.Name = "vl_pagoLabel";
+            vl_pagoLabel.Size = new System.Drawing.Size(81, 20);
+            vl_pagoLabel.TabIndex = 66;
+            vl_pagoLabel.Text = "Valor pago:";
+            // 
+            // ds_obsLabel
+            // 
+            ds_obsLabel.AutoSize = true;
+            ds_obsLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            ds_obsLabel.Location = new System.Drawing.Point(16, 175);
+            ds_obsLabel.Name = "ds_obsLabel";
+            ds_obsLabel.Size = new System.Drawing.Size(38, 20);
+            ds_obsLabel.TabIndex = 68;
+            ds_obsLabel.Text = "Obs:";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -88,9 +168,9 @@
             this.label1.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(225, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 34);
+            this.label1.Size = new System.Drawing.Size(306, 34);
             this.label1.TabIndex = 52;
-            this.label1.Text = "CONTAS A PAGAR";
+            this.label1.Text = "CONTAS A RECEBER";
             // 
             // contasDataSet1
             // 
@@ -116,16 +196,6 @@
             this.tableAdapterManager.tbUsuarioTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ProjetoContas.contasDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // cd_contaLabel
-            // 
-            cd_contaLabel.AutoSize = true;
-            cd_contaLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cd_contaLabel.Location = new System.Drawing.Point(12, 61);
-            cd_contaLabel.Name = "cd_contaLabel";
-            cd_contaLabel.Size = new System.Drawing.Size(73, 20);
-            cd_contaLabel.TabIndex = 54;
-            cd_contaLabel.Text = "Cód. onta:";
-            // 
             // cd_contaTextBox
             // 
             this.cd_contaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbContasReceberBindingSource, "cd_conta", true));
@@ -134,16 +204,6 @@
             this.cd_contaTextBox.Name = "cd_contaTextBox";
             this.cd_contaTextBox.Size = new System.Drawing.Size(81, 22);
             this.cd_contaTextBox.TabIndex = 55;
-            // 
-            // dt_emissaoLabel
-            // 
-            dt_emissaoLabel.AutoSize = true;
-            dt_emissaoLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dt_emissaoLabel.Location = new System.Drawing.Point(12, 89);
-            dt_emissaoLabel.Name = "dt_emissaoLabel";
-            dt_emissaoLabel.Size = new System.Drawing.Size(115, 20);
-            dt_emissaoLabel.TabIndex = 56;
-            dt_emissaoLabel.Text = "Data de emissao:";
             // 
             // dt_emissaoDateTimePicker
             // 
@@ -154,16 +214,6 @@
             this.dt_emissaoDateTimePicker.Size = new System.Drawing.Size(250, 22);
             this.dt_emissaoDateTimePicker.TabIndex = 57;
             // 
-            // dt_vencimentoLabel
-            // 
-            dt_vencimentoLabel.AutoSize = true;
-            dt_vencimentoLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dt_vencimentoLabel.Location = new System.Drawing.Point(10, 118);
-            dt_vencimentoLabel.Name = "dt_vencimentoLabel";
-            dt_vencimentoLabel.Size = new System.Drawing.Size(135, 20);
-            dt_vencimentoLabel.TabIndex = 58;
-            dt_vencimentoLabel.Text = "Data de vencimento:";
-            // 
             // dt_vencimentoDateTimePicker
             // 
             this.dt_vencimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tbContasReceberBindingSource, "dt_vencimento", true));
@@ -172,16 +222,6 @@
             this.dt_vencimentoDateTimePicker.Name = "dt_vencimentoDateTimePicker";
             this.dt_vencimentoDateTimePicker.Size = new System.Drawing.Size(256, 22);
             this.dt_vencimentoDateTimePicker.TabIndex = 59;
-            // 
-            // vl_contaLabel
-            // 
-            vl_contaLabel.AutoSize = true;
-            vl_contaLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            vl_contaLabel.Location = new System.Drawing.Point(387, 90);
-            vl_contaLabel.Name = "vl_contaLabel";
-            vl_contaLabel.Size = new System.Drawing.Size(103, 20);
-            vl_contaLabel.TabIndex = 60;
-            vl_contaLabel.Text = "Valor da conta:";
             // 
             // vl_contaTextBox
             // 
@@ -192,16 +232,6 @@
             this.vl_contaTextBox.Name = "vl_contaTextBox";
             this.vl_contaTextBox.Size = new System.Drawing.Size(227, 22);
             this.vl_contaTextBox.TabIndex = 61;
-            // 
-            // id_clienteLabel
-            // 
-            id_clienteLabel.AutoSize = true;
-            id_clienteLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_clienteLabel.Location = new System.Drawing.Point(188, 61);
-            id_clienteLabel.Name = "id_clienteLabel";
-            id_clienteLabel.Size = new System.Drawing.Size(56, 20);
-            id_clienteLabel.TabIndex = 62;
-            id_clienteLabel.Text = "Cliente:";
             // 
             // id_clienteTextBox
             // 
@@ -214,16 +244,6 @@
             this.id_clienteTextBox.TabIndex = 63;
             this.id_clienteTextBox.TextChanged += new System.EventHandler(this.id_clienteTextBox_TextChanged);
             // 
-            // dt_pagamentoLabel
-            // 
-            dt_pagamentoLabel.AutoSize = true;
-            dt_pagamentoLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dt_pagamentoLabel.Location = new System.Drawing.Point(13, 147);
-            dt_pagamentoLabel.Name = "dt_pagamentoLabel";
-            dt_pagamentoLabel.Size = new System.Drawing.Size(132, 20);
-            dt_pagamentoLabel.TabIndex = 64;
-            dt_pagamentoLabel.Text = "Data de pagamento:";
-            // 
             // dt_pagamentoDateTimePicker
             // 
             this.dt_pagamentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tbContasReceberBindingSource, "dt_pagamento", true));
@@ -232,16 +252,6 @@
             this.dt_pagamentoDateTimePicker.Name = "dt_pagamentoDateTimePicker";
             this.dt_pagamentoDateTimePicker.Size = new System.Drawing.Size(256, 22);
             this.dt_pagamentoDateTimePicker.TabIndex = 65;
-            // 
-            // vl_pagoLabel
-            // 
-            vl_pagoLabel.AutoSize = true;
-            vl_pagoLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            vl_pagoLabel.Location = new System.Drawing.Point(419, 147);
-            vl_pagoLabel.Name = "vl_pagoLabel";
-            vl_pagoLabel.Size = new System.Drawing.Size(81, 20);
-            vl_pagoLabel.TabIndex = 66;
-            vl_pagoLabel.Text = "Valor pago:";
             // 
             // vl_pagoTextBox
             // 
@@ -253,16 +263,6 @@
             this.vl_pagoTextBox.Size = new System.Drawing.Size(211, 22);
             this.vl_pagoTextBox.TabIndex = 67;
             // 
-            // ds_obsLabel
-            // 
-            ds_obsLabel.AutoSize = true;
-            ds_obsLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ds_obsLabel.Location = new System.Drawing.Point(16, 175);
-            ds_obsLabel.Name = "ds_obsLabel";
-            ds_obsLabel.Size = new System.Drawing.Size(38, 20);
-            ds_obsLabel.TabIndex = 68;
-            ds_obsLabel.Text = "Obs:";
-            // 
             // ds_obsTextBox
             // 
             this.ds_obsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbContasReceberBindingSource, "ds_obs", true));
@@ -273,6 +273,7 @@
             this.ds_obsTextBox.Name = "ds_obsTextBox";
             this.ds_obsTextBox.Size = new System.Drawing.Size(347, 140);
             this.ds_obsTextBox.TabIndex = 69;
+            this.ds_obsTextBox.TextChanged += new System.EventHandler(this.Ds_obsTextBox_TextChanged);
             // 
             // btnSair
             // 
@@ -282,6 +283,7 @@
             this.btnSair.TabIndex = 79;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // btnImprimir
             // 
@@ -309,6 +311,7 @@
             this.btnCancelar.TabIndex = 76;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -318,6 +321,7 @@
             this.btnSalvar.TabIndex = 75;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // btnExcluir
             // 
@@ -327,6 +331,7 @@
             this.btnExcluir.TabIndex = 74;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -336,6 +341,7 @@
             this.btnAlterar.TabIndex = 73;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.BtnAlterar_Click);
             // 
             // btnNovo
             // 
@@ -345,6 +351,7 @@
             this.btnNovo.TabIndex = 72;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
             // btnProximo
             // 
@@ -354,6 +361,7 @@
             this.btnProximo.TabIndex = 71;
             this.btnProximo.Text = "Próximo";
             this.btnProximo.UseVisualStyleBackColor = true;
+            this.btnProximo.Click += new System.EventHandler(this.BtnProximo_Click);
             // 
             // btnAnterior
             // 
@@ -369,7 +377,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 450);
+            this.ClientSize = new System.Drawing.Size(729, 388);
+            this.ControlBox = false;
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnPesquisar);
@@ -399,7 +408,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "frmContasReceber";
-            this.Text = "frmContasReceber";
+            this.Text = "Contas a receber";
             this.Load += new System.EventHandler(this.frmContasReceber_Load);
             ((System.ComponentModel.ISupportInitialize)(this.contasDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbContasReceberBindingSource)).EndInit();

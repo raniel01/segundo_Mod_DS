@@ -234,6 +234,7 @@
             this.cd_usuarioTextBox.Name = "cd_usuarioTextBox";
             this.cd_usuarioTextBox.Size = new System.Drawing.Size(100, 22);
             this.cd_usuarioTextBox.TabIndex = 11;
+            this.cd_usuarioTextBox.TextChanged += new System.EventHandler(this.cd_usuarioTextBox_TextChanged);
             // 
             // nm_usuarioTextBox
             // 
@@ -323,7 +324,7 @@
             this.Controls.Add(this.btnProximo);
             this.Controls.Add(this.btnAnterior);
             this.Name = "frmUsuario";
-            this.Text = "frmUsuario";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.contasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbUsuarioBindingSource)).EndInit();

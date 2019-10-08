@@ -216,6 +216,7 @@
             this.vl_contaTextBox.Name = "vl_contaTextBox";
             this.vl_contaTextBox.Size = new System.Drawing.Size(200, 22);
             this.vl_contaTextBox.TabIndex = 8;
+            this.vl_contaTextBox.TextChanged += new System.EventHandler(this.vl_contaTextBox_TextChanged);
             // 
             // id_fornecedorTextBox
             // 
@@ -412,7 +413,7 @@
             this.Controls.Add(ds_obsLabel);
             this.Controls.Add(this.ds_obsTextBox);
             this.Name = "frmContasPagar";
-            this.Text = "frmContasPagar";
+            this.Text = "Contas a pagar";
             this.Load += new System.EventHandler(this.frmContasPagar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.contasDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbContasPagarBindingSource)).EndInit();

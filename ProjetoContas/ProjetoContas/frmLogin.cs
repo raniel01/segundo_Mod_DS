@@ -24,11 +24,27 @@ namespace ProjetoContas
                 frmPrincipal fp = new frmPrincipal();
                 fp.Show();
             }
+            Hide();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

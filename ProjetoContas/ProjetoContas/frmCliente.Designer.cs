@@ -559,7 +559,7 @@
             this.Controls.Add(cd_ieLabel);
             this.Controls.Add(this.cd_ieTextBox);
             this.Name = "frmCliente";
-            this.Text = "Clente";
+            this.Text = "Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.tbClienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contasDataSet1)).EndInit();
             this.ResumeLayout(false);

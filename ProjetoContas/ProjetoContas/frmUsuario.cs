@@ -139,5 +139,11 @@ namespace ProjetoContas
         {
 
         }
+
+        private void cd_usuarioTextBox_TextChanged(object sender, EventArgs e)
+        {
+            //if (e.keyChar < '0' || e.keyChar > '9')
+               // e.keyChar = (char)0;
+        }
     }
 }

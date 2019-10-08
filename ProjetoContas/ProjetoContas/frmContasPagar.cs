@@ -171,5 +171,10 @@ namespace ProjetoContas
         {
             Close();
         }
+
+        private void vl_contaTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

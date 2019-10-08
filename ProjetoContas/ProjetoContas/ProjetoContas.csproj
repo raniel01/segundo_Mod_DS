@@ -200,6 +200,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>contas.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\contabilidade-logo-7C9D34CD75-seeklogo.com.png" />
     <None Include="Resources\fundo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

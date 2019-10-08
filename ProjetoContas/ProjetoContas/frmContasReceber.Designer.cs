@@ -79,9 +79,9 @@
             cd_contaLabel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             cd_contaLabel.Location = new System.Drawing.Point(12, 61);
             cd_contaLabel.Name = "cd_contaLabel";
-            cd_contaLabel.Size = new System.Drawing.Size(73, 20);
+            cd_contaLabel.Size = new System.Drawing.Size(82, 20);
             cd_contaLabel.TabIndex = 54;
-            cd_contaLabel.Text = "Cód. onta:";
+            cd_contaLabel.Text = "Cód. Conta:";
             // 
             // dt_emissaoLabel
             // 
@@ -200,7 +200,7 @@
             // 
             this.cd_contaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbContasReceberBindingSource, "cd_conta", true));
             this.cd_contaTextBox.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cd_contaTextBox.Location = new System.Drawing.Point(91, 61);
+            this.cd_contaTextBox.Location = new System.Drawing.Point(97, 61);
             this.cd_contaTextBox.Name = "cd_contaTextBox";
             this.cd_contaTextBox.Size = new System.Drawing.Size(81, 22);
             this.cd_contaTextBox.TabIndex = 55;

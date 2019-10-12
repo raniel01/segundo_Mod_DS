@@ -12,6 +12,7 @@ namespace ProjetoContas
 {
     public partial class frmUsuario : Form
     {
+        public static int codigo;
         private void Habilita()
         {
             //textbox
@@ -132,7 +133,14 @@ namespace ProjetoContas
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-
+            int reg;
+            codigo = 0;
+            frmPesquisaUsuario fpu = new frmPesquisaUsuario();
+            fpu.ShowDialog();
+            if (codigo > 0) { 
+              reg =  tbUsuarioBindingSource.Find("cd_usuario", codigo);
+              tbUsuarioBindingSource.Position = reg;
+            }
         }
 
         private void frmUsuario_Load(object sender, EventArgs e)

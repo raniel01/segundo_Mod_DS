@@ -76,7 +76,7 @@
             this.txtLogin.Location = new System.Drawing.Point(84, 163);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(196, 26);
-            this.txtLogin.TabIndex = 3;
+            this.txtLogin.TabIndex = 0;
             this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
             // 
             // txtSenha
@@ -85,7 +85,7 @@
             this.txtSenha.Location = new System.Drawing.Point(84, 208);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(196, 26);
-            this.txtSenha.TabIndex = 0;
+            this.txtSenha.TabIndex = 1;
             // 
             // btnOK
             // 
@@ -96,7 +96,7 @@
             this.btnOK.Location = new System.Drawing.Point(84, 263);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 28);
-            this.btnOK.TabIndex = 4;
+            this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -110,7 +110,7 @@
             this.btnSair.Location = new System.Drawing.Point(188, 263);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 28);
-            this.btnSair.TabIndex = 5;
+            this.btnSair.TabIndex = 3;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);

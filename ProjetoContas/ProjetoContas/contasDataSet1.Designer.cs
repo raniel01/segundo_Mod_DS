@@ -4233,13 +4233,20 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_c" +
                 "ep, ds_telefone, ds_email, sg_tipo, cd_cpf, cd_cnpj, cd_rg, cd_ie FROM dbo.tbCli" +
                 "ente";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estad" +
+                "o, cd_cep, ds_telefone, ds_email, sg_tipo, cd_cpf, cd_cnpj, cd_rg, cd_ie\r\nFROM  " +
+                "          tbCliente\r\nWHERE        (nm_cliente LIKE @nome)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nm_cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4261,6 +4268,42 @@ SELECT cd_cliente, nm_cliente, ds_endereco, nm_cidade, nm_bairro, sg_estado, cd_
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual contasDataSet1.tbClienteDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            contasDataSet1.tbClienteDataTable dataTable = new contasDataSet1.tbClienteDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByNomeCliente(contasDataSet1.tbClienteDataTable dataTable, string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((nome == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual contasDataSet1.tbClienteDataTable GetDataByNomeCliente(string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((nome == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
             contasDataSet1.tbClienteDataTable dataTable = new contasDataSet1.tbClienteDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

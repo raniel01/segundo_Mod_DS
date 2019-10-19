@@ -51,5 +51,18 @@ namespace ProjetoContas
             frmUsuario.codigo = int.Parse(tbUsuarioDataGridView.CurrentRow.Cells[0].Value.ToString());
             Close();
         }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "")
+                tbUsuarioTableAdapter.Fill(contasDataSet1.tbUsuario);
+            else
+                tbUsuarioTableAdapter.FillByNome(contasDataSet1.tbUsuario, "%" + txtNome.Text + "%");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
